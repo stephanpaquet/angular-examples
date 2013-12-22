@@ -1,0 +1,30 @@
+<!--
+A $scope object in AngularJS is here to expose the domain model to a view (template)
+Note: no need ng-init
+ng-app is declared inside the div element
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular JS - Example with Controller</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app ng-controller="HelloCtrl">
+            Say hello to: <input type="text" ng-model="name" /><br />
+            <h1>Hello, {{getName()}}!</h1>
+        </div>
+        
+        <script>
+            var HelloCtrl = function ($scope) {
+                $scope.name = 'World !';
+                $scope.getName = function() {
+                    return $scope.name;
+                };
+            };            
+        </script>
+    </body>
+</html>
+    
