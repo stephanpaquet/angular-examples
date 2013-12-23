@@ -1,0 +1,26 @@
+<!--
+- Include Angular JS librairy
+- Bootstrap the by adding ng-app into body tag
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Binding a checkbox - Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    </head>
+
+    <body ng-app>
+        <h1>Binding a checkbox - Example</h1>
+        <form ng-controller="Ctrl">
+            <input id="checkbox" type="checkbox" name="" value="answer" ng-model="value" />
+            <label for="checkbox" >{{value}}</label>
+        </form>
+
+        <script>
+            function Ctrl($scope) {
+                $scope.value = true; // true is initial default value - checked
+            }
+        </script>
+    </body>
+</html>
